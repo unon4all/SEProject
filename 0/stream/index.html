@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CamStream</title>
+<!-- <link rel="stylesheet" href="styles.css">-->
+</head>
+<body>
+<video id="vid" autoplay></video>
+<script>
+
+navigator.mediaDevices.getUserMedia({
+video: true
+})
+.then(stream => { document.getElementById("vid").srcObject = stream; })
+
+</script>
+<!--<script src="script.js"></script>-->
+</body>
+</html>
